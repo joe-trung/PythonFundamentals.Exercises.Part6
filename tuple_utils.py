@@ -35,15 +35,15 @@ def count_instances(collection: Tuple, instance: Union[int, str]) -> int:
 def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     """
     This function iterates through the given parameters and prints the items formatted according to the following rules:
-    The index of the indexes iterable correspond to the index of the entries iterable.
+    Tehe index of the indexes iterable correspond to the index of the entries itrable.
     The index takes 10 places even if it doesn't need all 10 places.
 
     :param indexes: A list or tuple
     :param entries: A list or tuple
     :return: None
     """
-    for index, entry in list(indexes, entries):
-
+    for index, entry in zip(indexes, entries):
+        print(f'Index: {str(index):10} Entry: {entry}')
 
 
 def print_items_with_index(items: Iterable):
@@ -55,5 +55,6 @@ def print_items_with_index(items: Iterable):
     :param items: A tuple or a list
     :return: None
     """
-    pass  # remove pass statement and implement me
+    for index, item in enumerate(items, start=1):
+        print(f'{index}: {item}')
 
