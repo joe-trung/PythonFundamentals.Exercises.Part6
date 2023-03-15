@@ -43,7 +43,7 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     :return: None
     """
     for index, entry in list(indexes, entries):
-        return
+
 
 
 def print_items_with_index(items: Iterable):
